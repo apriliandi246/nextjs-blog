@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
-import styles from "./layout.module.css";
+import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 
 const siteTitle = "Next.js Sample Website";
-const name = "Farhan";
 
 export default function Layout({ children, home }) {
    return (
@@ -57,7 +56,7 @@ export default function Layout({ children, home }) {
             )}
          </header>
 
-         <main>{children}</main>
+         <>{children}</>
 
          {!home && (
             <div className={styles.backToHome}>
